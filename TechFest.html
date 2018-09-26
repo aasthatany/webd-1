@@ -1,0 +1,390 @@
+<html>
+    <head>
+        <link rel="shortcut icon" href="Greentech.ico" />
+        <title>TechFest</title>
+        <style>
+            body {
+                margin: 0;
+                font-size: 28px;
+                font-family: Arial, Helvetica, sans-serif;
+                background: #227093;
+                }
+            #navbar {
+                overflow: hidden;
+                background-color: #dfe6e9;
+            }
+            #navbar a {
+                float: left;
+                display: block;
+                color:#227093;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                font-size: 17px;
+            }
+                #navbar a:hover {
+                background-color: #227093;
+                color:white;
+            }
+            #navbar a.active {
+                background-color: #227093;
+                color: white;
+            }
+            .content {
+                padding: 16px;
+            }
+            .sticky {
+                position: fixed;
+                top: 0;
+                width: 100%;
+            }
+            .sticky + .content {
+                padding-top: 60px;
+            }
+            .container {
+                position: relative;
+                text-align: center;
+                color: white;
+            }
+            /* Bottom left text */
+            .bottom-left {
+                position: absolute;
+                bottom: 8px;
+                left: 16px;
+                }
+            /* Top left text */
+            .top-left {
+                position: absolute;
+                top: 8px;
+                left: 16px;
+            }
+            /* Top right text */
+            .top-right {
+                position: absolute;
+                top: 8px;
+                right: 16px;
+            }
+            /* Bottom right text */
+            .bottom-right {
+                position: absolute;
+                bottom: 8px;
+                right: 16px;
+            }
+            /* Centered text */
+            .centered {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            .slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+            /* Hide the images by default */
+            .mySlides {
+    display: none;
+}
+            /* Next & previous buttons */
+            .prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+            /* Position the "next button" to the right */
+            .next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+            /* On hover, add a black background color with a little bit see-through */
+            .prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+            /* Caption text */
+            .text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+            /* Number text (1/3 etc) */
+            .numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+            /* The dots/bullets/indicators */
+            .dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+            .active, .dot:hover {
+  background-color: #717171;
+}
+            /* Fading animation */
+            .fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+            @-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+            @keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+            * {
+  box-sizing: border-box;
+}
+            body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+            /* Float four columns side by side */
+            .column {
+                float: left;
+  width: 32%;
+  padding: 0 10px;
+}
+            /* Remove extra left and right margins, due to padding in columns */
+            .row {margin: 0 -5px;}
+            /* Clear floats after the columns */
+            .row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+            /* Style the counter cards */
+            .card {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+            /* Responsive columns - one column layout (vertical) on small screens */
+            @media screen and (max-width: 1000px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 16px;
+  }
+}
+            .card-columns {
+            @include media-breakpoint-only(lg) {
+            column-count: 4;
+  }
+            @include media-breakpoint-only(xl) {
+                column-count: 5;
+  }
+}
+            nav {
+    display: block;
+}
+            body, html, .main {
+    height: 100%;
+}
+            section {
+    min-height: 100%;
+}
+        </style>
+    </head> 
+    <body>
+        <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-    expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar">
+                <a class="navbar-brand nav-item active" href="TechFest.html" style="font-family:cursive; font-size: 20" >
+                <img src="Greentech.ico" width="25" height="25" class="d-inline-block align-top" alt="">
+                    <b>TechFest<span class="sr-only"></span></b>
+                </a>
+                <a class="nav-link" href="#"></a>
+                <a class="nav-link" href="#" style="font-size: 20" onclick="scrollWin(0, 50)" >Home </a>
+                <a class="nav-link" href="#" style="font-size: 20" onclick="scrollWin(0, 100)">Events</a>
+                <a class="nav-link" href="#" style="font-size: 20" onclick="scrollWin(0, 150)">Contact us</a>
+                <a class="nav-link" href="#" style="font-size: 20" onclick="scrollWin(0, 200)">Venue</a>
+        </div>
+            </nav>
+        <br><br>        <!-- Slideshow container -->
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+      <div class="numbertext">1 / 3</div>
+      <div><img src="4.jpg" style="width:100%; opacity: 0.8;" ></div>
+      <div class="text" style="font-size: 300%; text-align:center; color: white">TechFest<br><br><br><br><br></div>
+        <div class="text" style="text-align: center; font-size: 200%; font-family: cursive; color: white">ARE YOU INNOVATIVE?</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 3</div>
+    <img src="3.jpg" style="width:100%; opacity: 0.7;">
+            <div class="text" style="font-size: 300%; text-align:center; color: white">TechFest<br><br><br><br><br></div>
+    <div class="text" style="text-align:center; color: aliceblue; font-size: 300%;">Show us what you got?</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 3</div>
+    <img src="2.png" style="width:100%; bopacity: 0.2;">
+            <div class="text" style="font-size: 300%; text-align:center; color: white">TechFest<br><br><br><br><br></div>
+      <div class="text" style="font-size: 200%; text-align:center;font-family: cursive; color: white">COME AND BE A PART OF IT!<br><br><br><br><br></div>
+
+  </div>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+            </div>    </div>
+<div class="row">
+  <div class="column">
+    <div class="card">
+        <img src="5.jpg" width="300px" height="300px">
+        <h5 class="card-title" style="color: #227093"><ul>Machine Learning</ul></h5>
+    <p class="card-text">Machine learning gives computers the ability to learn without being explicitly programmed.</p>
+    <a href="#" class="btn btn-primary"></a>
+  </div>
+      </div> 
+  <div class="column">
+    <div class="card">
+      <img src="6.jpg" width="305px" height="305px">
+        <h5 class="card-title" style="color: #227093"><ul>Big Data</ul></h5>
+    <p class="card-text">Big data is a term used for certain database systems.</p>
+    <a href="#" class="btn btn-primary" ></a>
+      </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <img src="7.png" width="305px" height="305px">
+        <h5 class="card-title" style="color: #227093">Networking</h5>
+    <p class="card-text">Networking is a process that fosters the exchange of information and ideas among individuals or groups that share a common interest.</p>
+    <a href="#" class="btn btn-primary" ></a>
+      </div>
+  </div>
+</div>
+        <hr>
+        <p style="color: aliceblue; font-size: 42;">CONTACT US</p>
+        <p style="color: aliceblue; font-size: 25;">Road no 123,Street 201,<br>New Delhi<br>pin code:170082</p>
+        <p style="color: aliceblue; font-size: 32;">Tel. no.:89xxxxxxxx<br>Email:TechFest@something.com</p>
+        <form style="color: aliceblue; font-size: 25;">
+            First name:
+        <input type="text" name="firstname">&nbsp; &nbsp;
+            Last name:
+        <input type="text" name="lastname"><br><br>
+        Email:&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;<input id="emailAddress" type="email" pattern="[^ @]*@[^ @]*"  placeholder="sophie@example.com"; size="45"><br><br><br>
+            &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;<input type="SUBMIT" value="Submit" style="height:40px; width:80px" >
+             &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;<input type="RESET" value="reset" style="height:40px; width:80px">
+        </form>
+        <br><br><hr>
+        <div class="container">
+        <p style="font-size: 100%; font-family: cursive; color: aliceblue;">
+            Campus 15 Rd<br>
+            Chandaka Industrial Estate,<br> Patia
+            Bhubaneswar,<br> Odisha 751024<br></p>
+            <div class="left"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3740.828136619918!2d85.8133689142222!3d20.348717386370687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a190919cbdc7d03%3A0xbb3041e06ea182d1!2sCampus+15+Rd%2C+Chandaka+Industrial+Estate%2C+Patia%2C+Bhubaneswar%2C+Odisha+751024!5e0!3m2!1sen!2sin!4v1537892053092" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+        </div>
+        <hr>
+        <p style="font-size: 10; color: aliceblue;">&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; ;@ 2023 by Personal Life Coach.Proudly created by Aastha.</p>
+    </body>
+<script> 
+         var slideIndex = 0;
+carousel();
+
+function carousel() {
+    var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+    showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    if (n > x.length) {slideIndex = 1} 
+    if (n < 1) {slideIndex = x.length} ;
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none"; 
+    }
+    x[slideIndex-1].style.display = "block"; 
+}
+}
+        </script>
+<script>
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>
+    <script>
+    var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1} 
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none"; 
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block"; 
+  dots[slideIndex-1].className += " active";
+}
+    </script>
+    <script>
+function scrollWin(x, y) {
+    window.scrollBy(x, y);
+}
+</script>
+</html>
